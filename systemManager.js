@@ -17,7 +17,7 @@ if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
     //process.env.MAIL_URL = "smtp://me%40brentjanderson.com:el4Um-PMBHb7x673Ep7ByA@smtp.mandrillapp.com:587";
-    process.env.MAIL_URL = "smtp://AKIAIZMZSLYYBCLF6V5Q:ApwbsjSwzXD1cBKmqTcB0tcvNxVS07XgZ16VyP%2FzR%2Fgf@email-smtp.us-east-1.amazonaws.com:465"
+    // process.env.MAIL_URL = ""
   });
 
   Meteor.methods({
