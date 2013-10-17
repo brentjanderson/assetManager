@@ -10,3 +10,7 @@ preserve-inputs
 email
 aws-sdk
 bootstrap
+accounts-ui
+accounts-base
+accounts-facebook
+accounts-password
