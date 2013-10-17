@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
   Template.hello.greeting = function () {
-    return "Welcome to systemManager.";
+    return "Welcome to Asset Manager.";
   };
 
   Template.hello.events({
@@ -16,8 +16,6 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
-    //process.env.MAIL_URL = "smtp://me%40brentjanderson.com:el4Um-PMBHb7x673Ep7ByA@smtp.mandrillapp.com:587";
-    // process.env.MAIL_URL = ""
   });
 
   Meteor.methods({
