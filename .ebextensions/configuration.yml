@@ -1,7 +1,7 @@
 packages:
   yum:
     git: []
-    node: []
+    npm: []
 
 files:
   /opt/elasticbeanstalk/hooks/appdeploy/pre/51install_meteor.sh:
