@@ -1,7 +1,9 @@
 packages:
   yum:
+    gcc-c++: []
+    make: []
+    openssl-dev: []
     git: []
-    npm: []
 
 files:
   /opt/elasticbeanstalk/hooks/appdeploy/pre/51install_meteor.sh:
@@ -14,9 +16,16 @@ files:
       echo !!!  Setting up METEOR dependencies
       export PATH=$PATH:/usr/local/bin
       echo !!!  Set PATH: $PATH
-      ln -s /opt/elasticbeanstalk/node-install/node-v0.10.21-linux-x64/bin/node /usr/local/bin/node
-      ln -s /opt/elasticbeanstalk/node-install/node-v0.10.21-linux-x64/bin/node-waf /usr/local/bin/node-waf
-      ln -s /opt/elasticbeanstalk/node-install/node-v0.10.21-linux-x64/bin/npm /usr/local/bin/npm
+      echo !!!  Installing Latest nodejs
+      git clone git://github.com/joyent/node.git 
+      cd node
+      git checkout v0.10.21
+      echo !!! Configuring NodeJS
+      ./configure
+      echo !!! Building NodeJS
+      make
+      echo !!! Installing NodeJS
+      sudo make install
       echo !!!  Installing Meteor
       export HOME=/home/ec2-user
       curl https://install.meteor.com | sh
